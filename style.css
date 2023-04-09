@@ -1,0 +1,11 @@
+body{
+  background: lightcoral;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: auto;
+}
+
