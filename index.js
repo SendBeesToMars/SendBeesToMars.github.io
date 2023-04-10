@@ -45,24 +45,21 @@ function set_word(word) {
 function handle_orientation(event) {
     const tilt = Math.round(event.gamma) + 90;
     const beta = Math.round(event.beta);
-    set_word(tilt + "    " + beta);
+    set_word(tilt + "______" + beta);
 
-    if (((tilt > 140 && tilt <= 180) || (tilt >= 0 && tilt < 40))) {
-        background.backgroundColor = "CornflowerBlue";
-        tilt_flag = false;
-    } else {
-        if (beta < 30 && beta > -30) {
-            if (tilt >= 40 && tilt < 110) {
-                background.backgroundColor = "YellowGreen";
-            } else {
-                background.backgroundColor = "Tomato";
-            }
+    if (beta < 30 && beta > -30) {
+        if (((tilt > 145 && tilt <= 180) || (tilt >= 0 && tilt < 35))) {
+            background.backgroundColor = "CornflowerBlue";
+            tilt_flag = false;
         } else {
-            if (tilt >= 40 && tilt < 110) {
-                background.backgroundColor = "Tomato";
-            } else {
-                background.backgroundColor = "YellowGreen";
-            }
+            background.backgroundColor = "YellowGreen";
+        }
+    } else {
+        if (((tilt > 145 && tilt <= 180) || (tilt >= 0 && tilt < 35))) {
+            background.backgroundColor = "CornflowerBlue";
+            tilt_flag = false;
+        } else {
+            background.backgroundColor = "Tomato";
         }
     }
 }
