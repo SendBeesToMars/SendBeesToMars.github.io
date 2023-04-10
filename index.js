@@ -52,14 +52,14 @@ function handle_orientation(event) {
             background.backgroundColor = "CornflowerBlue";
             tilt_flag = false;
         } else {
-            background.backgroundColor = "YellowGreen";
+            background.backgroundColor = "Tomato";
         }
     } else {
-        if (((tilt > 145 && tilt <= 180) || (tilt >= 0 && tilt < 35))) {
+        if (((tilt > 130 && tilt <= 180) || (tilt >= 0 && tilt < 50))) {
             background.backgroundColor = "CornflowerBlue";
             tilt_flag = false;
         } else {
-            background.backgroundColor = "Tomato";
+            background.backgroundColor = "YellowGreen";
         }
     }
 }
