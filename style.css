@@ -1,13 +1,15 @@
 body{
   background: lightcoral;
   font-family: system-ui;
-  font-size: 4rem;
+  font-size: 2rem;
+  margin: auto;
 }
 
 #container{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: auto;
+  position:fixed;
+  top: 50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
